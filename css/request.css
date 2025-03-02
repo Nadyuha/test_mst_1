@@ -2,38 +2,34 @@
   margin-bottom: 100px;
 }
 
+.request__container {
+  display: flex;
+}
+
+.request__form-block-img {
+  width: 100%;
+  background-image: url('../img/pic_4.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 30px 30px 0;
+}
+
 .request__form {
-  position: relative;
   border: 2px solid #d5c9be;
-  border-radius: 30px;
+  border-radius: 30px 0 0 30px;
   background: var(--white);
   width: 100%;
   padding-top: 72px;
   padding-bottom: 72px;
   padding-left: 134px;
-  background-image: url('../img/pic_4.jpg');
-  background-position: top right -280px;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.request__form::after {
-  content: '';
-  display: block;
-  position: absolute;
-  background: url('../img/men.png');
-  max-width: 800px;
-  width: 100%;
-  min-height: 835px;
-  top: -150px;
-  right: 0;
 }
 
 .request__form-fieldset {
   display: flex;
   flex-direction: column;
   border: none;
-  width: 49%;
+  width: 90%;
 }
 
 .request__form-legend {
@@ -163,47 +159,16 @@
   color: #b38705;
 }
 
-@media (max-width: 1800px) {
-  .request__form {
-    background-position: top right -380px;
-  }
-
-  .request__form::after {
-    min-height: 820px;
-    top: -100px;
-  }
-
-  .request__form-fieldset {
-    width: 33%;
-  }
-
-  .request__form-legend {
-    font-size: 44px;
-  }
-
-  .request__form {
-    padding-left: 60px;
-  }
-}
-
 @media (max-width: 1400px) {
   .request__form {
-    background-position: top right -480px;
-  }
-
-  .request__form::after {
-    background: none;
+    padding-left: 54px;
   }
 }
 
 @media (max-width: 1100px) {
+
   .request {
     margin-bottom: 30px;
-  }
-
-  .request__form {
-    background-position: top right -620px;
-    background-size: cover;
   }
 
   .request__btn {
@@ -213,12 +178,14 @@
 }
 
 @media (max-width: 900px) {
-  .request__form {
-    background-image: none;
+
+  .request__form-block-img {
+    display: none;
   }
 
   .request__form {
     padding: 22px;
+    border-radius: 30px;
   }
 
   .request__form-fieldset {
@@ -240,7 +207,8 @@
   }
 
   .request__form-input {
-    width: 100%;
+    padding: 15px 8px;
+    width: 80%;
   }
 }
 

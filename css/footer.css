@@ -41,6 +41,7 @@
   height: 58px;
   max-width: 400px;
   gap: 10px;
+  margin-right: 10px;
 }
 
 .footer__logo {
@@ -62,7 +63,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
-  transform: translateX(-110px);
+  /* transform: translateX(-110px); */
 }
 
 .footer__btn {
@@ -122,12 +123,6 @@
   opacity: 0.8;
 }
 
-@media (max-width: 1800px) {
-  .footer__social-list {
-    gap: 15px;
-    transform: translateX(-110px);
-  }
-}
 
 @media (max-width: 1400px) {
   .footer__logo-text {

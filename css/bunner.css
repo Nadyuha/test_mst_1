@@ -1,16 +1,27 @@
 .bunner {
   position: relative;
-  background: url('../img/pic_1.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right -480px top;
   overflow: hidden;
   margin-bottom: 100px;
 }
 
+.bunner__block-img {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: url('../img/pic_1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .bunner__block {
-  padding-top: 150px;
-  width: 60%;
+  position: relative;
+  padding-top: 332px;
+  width: 55%;
+  z-index: 10;
 }
 
 .bunner__title {
@@ -20,6 +31,7 @@
   line-height: 1.2;
   color: var(--white);
   margin-bottom: 50px;
+  width: 60%;
 }
 
 .bunner__descr {
@@ -43,6 +55,7 @@
   display: flex;
   align-items: center;
   gap: 17px;
+  width: 100%;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 24px;
@@ -55,7 +68,8 @@
   content: '';
   display: block;
   background: url('../img/arrow_check.png');
-  width: 39px;
+  max-width: 39px;
+  width: 100%;
   height: 37px;
 }
 
@@ -96,33 +110,11 @@
   background-color: #b38705;
 }
 
-@media (max-width: 1800px) {
-  .bunner {
-    background-position: right -700px top;
-  }
-
-  .bunner__title {
-    font-size: 70px;
-  }
-
-  .bunner__descr {
-    width: 80%;
-  }
-
-  .bunner__block {
-    width: 70%;
-  }
-
-  .bunner__item {
-    gap: 10px;
-  }
-
-  .bunner__item span {
-    font-size: 35px;
-  }
-}
-
 @media (max-width: 1400px) {
+  .bunner__block {
+    padding-top: 165px;
+  }
+
   .bunner__title {
     font-size: 50px;
   }
@@ -146,15 +138,10 @@
   .bunner__descr {
     margin-bottom: 30px;
   }
-
-  .bunner {
-    background-position: right -500px top;
-  }
 }
 
 @media (max-width: 1100px) {
   .bunner {
-    background-image: none;
     margin-bottom: 30px;
   }
 
@@ -165,7 +152,6 @@
   .bunner__descr {
     font-size: 25px;
   }
-
 
   .bunner__item span {
     font-size: 25px;
@@ -179,32 +165,62 @@
 
 @media (max-width: 900px) {
   .bunner__block {
-    padding-top: 70px;
+    padding-top: 110px;
   }
 
   .bunner__title {
-    font-size: 40px;
+    font-size: 28px;
     margin-bottom: 30px;
   }
 
   .bunner__descr {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .bunner__btn {
     padding: 12px 40px;
     font-size: 13px;
   }
+
+  .bunner__list {
+    gap: 10px;
+  }
+
+  .bunner__item {
+    font-size: 13px;
+    gap: 7px;
+  }
+
+  .bunner__item span {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 550px) {
+  .bunner__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+  }
+  
+  .bunner__block-img {
+    display: none;
+  }
+
   .bunner__title {
+    width: 100%;
     font-size: 28px;
     margin-bottom: 20px;
   }
 
   .bunner__descr {
+    width: 100%;
     font-size: 12px;
+  }
+
+  .bunner__list {
+    width: 100%;
   }
 
   .bunner__item {
@@ -213,5 +229,9 @@
 
   .bunner__item span {
     font-size: 15px;
+  }
+
+  .bunner__btn {
+    width: 50%;
   }
 }

@@ -9,12 +9,14 @@
 .header.scrolled {
   background-color: var(--dark_2);
   opacity: 0.5;
+  top: 0;
 }
 
 .header__container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  gap: 210px;
 }
 
 .header__logo-container {
@@ -22,7 +24,6 @@
   align-items: center;
   height: 58px;
   max-width: 400px;
-  margin-right: 210px;
   gap: 10px;
 }
 
@@ -46,6 +47,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 29px;
 }
 
@@ -73,8 +75,8 @@
 
 
 @media (max-width: 1400px) {
-  .header__logo-container {
-    margin-right: 100px;
+  .header__container {
+    gap: 80px;
   }
 
   .header__logo-text {
@@ -89,7 +91,7 @@
   }
 
   .header__container {
-    justify-content: space-between;
+    gap: 20px;
   }
 
   .header__logo-text {
